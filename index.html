@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+	 
+  body{
+  background:aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 0;
+	font-size:130%;
+  }
+  h2{
+    font-family: arial;
+  }
+  form {
+    width: 15%;
+	height:40%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+	background-color: pink;
+	background-image:logo7.jpg;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+	font-size:70%;
+  }
+  input[type="submit"]{
+    background-color:aquamarine;
+    color: light blue;
+    cursor: pointer;
+	font-size:120%;
+	margin-bottom: 10px;
+  }
+</style>
+<script>
+    function validateLogin() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Add your authentication logic here
+      if (username === "jen_sef"&& password === "041292") {
+        window.location.href = "HOME.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+</script>
+</head>
+<body>
+
+
+<form onsubmit="event.preventDefault(); validateLogin()">
+
+<center><b><label for=" Sign In">Sign In</label></center>
+
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required><br>
+
+<input type="submit" value="Login">
+</form>
+
+</body>
+</html>
